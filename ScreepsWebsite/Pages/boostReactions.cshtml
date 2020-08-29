@@ -34,18 +34,18 @@
         z-index: 1;
     }
 
-    /* Links inside the dropdown */
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {
-        background-color: #ddd
-    }
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd
+            }
 
     /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
     .show {
@@ -57,16 +57,16 @@
         padding-bottom: 5px !important;
     }
 
-    td img {
-        padding: 0px 10px 0px 0px;
-    }
+        td img {
+            padding: 0px 10px 0px 0px;
+        }
 </style>
 
 @*<div class="dropdown">
-    <button onclick="dropdownFunction()" class="dropbtn"><img src="/images/OH.jpg" alt="Hydroxide" style="padding-right: 10px" />Hydroxide</button>
-    <div id="dropdown" class="dropdown-content">
-    </div>
-</div>*@
+        <button onclick="dropdownFunction()" class="dropbtn"><img src="/images/OH.jpg" alt="Hydroxide" style="padding-right: 10px" />Hydroxide</button>
+        <div id="dropdown" class="dropdown-content">
+        </div>
+    </div>*@
 
 <table class="table" style="background-color:ghostwhite">
     <!-- Table Headers -->
@@ -83,7 +83,7 @@
         <th>Energy Saved / Credit Cost * Energy Price</th>
     </tr>
 
-    <!-- Basic Header -->
+    <!-- Basic Reaction Header -->
     <tr style="background-color: grey">
         <td align="center" colspan="10"><b>Base Compounds</b></td>
     </tr>
@@ -232,10 +232,23 @@
         </td>
     </tr>
 
-
     <!-- Tier 1 Header -->
     <tr style="background-color: grey">
         <td align="center" colspan="10"><b>Tier 1 Compounds</b></td>
+    </tr>
+
+    <!-- Table Headers -->
+    <tr>
+        <th>Name</th>
+        <th>Formula</th>
+        <th>Time In Ticks</th>
+        <th>Total Time In Ticks</th>
+        <th>Body Part</th>
+        <th>Effect</th>
+        <th>Energy Saved With Each Boost</th>
+        <th>SpawnTime Saved With Each Boost In Ticks</th>
+        <th>Credit Cost With Each Boost Build From Raw</th>
+        <th>Energy Saved / Credit Cost * Energy Price</th>
     </tr>
 
     <!-- Reaction 1 -->
@@ -369,7 +382,7 @@
             +100% rangedAttack and rangedMassAttack effectiveness
         </td>
         <td>
-            160
+            130
         </td>
         <td>
             3
@@ -405,10 +418,10 @@
             +50% repair and build effectiveness without increasing the energy cost
         </td>
         <td>
-            Build: 2.480 / Repair: 500 (Based on 1K work ticks)
+            Build: 2.480 / Repair: 480 (Based on 1K work ticks)
         </td>
         <td>
-            3
+            0
         </td>
         <td>
             --
@@ -549,10 +562,10 @@
             +50% upgradeController effectiveness without increasing the energy cost
         </td>
         <td>
-            Upgrade: 1.000 (Based on 1K work ticks)
+            Upgrade: 480 (Based on 1K work ticks)
         </td>
         <td>
-            3
+            0
         </td>
         <td>
             --
@@ -588,7 +601,7 @@
             -20
         </td>
         <td>
-            3
+            0
         </td>
         <td>
             --
@@ -597,6 +610,786 @@
             --
         </td>
     </tr>
+
+    <!-- Tier 2 Header -->
+    <tr style="background-color: grey">
+        <td align="center" colspan="10"><b>Tier 2 Compounds</b></td>
+    </tr>
+
+    <!-- Table Headers -->
+    <tr>
+        <th>Name</th>
+        <th>Formula</th>
+        <th>Time In Ticks</th>
+        <th>Total Time In Ticks</th>
+        <th>Body Part</th>
+        <th>Effect</th>
+        <th>Energy Saved With Each Boost</th>
+        <th>SpawnTime Saved With Each Boost In Ticks</th>
+        <th>Credit Cost With Each Boost Build From Raw</th>
+        <th>Energy Saved / Credit Cost * Energy Price</th>
+    </tr>
+
+    <!-- Reaction 1 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/UHO2.jpg" alt="utrium acid" />  utrium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/UH.jpg" alt="utrium hydride" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            5
+        </td>
+        <td>
+            35
+        </td>
+        <td>
+            <b>ATTACK</b>
+        </td>
+        <td>
+            +200% attack effectiveness
+        </td>
+        <td>
+            140
+        </td>
+        <td>
+            6
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 2 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/UHO2.jpg" alt="utrium alkalide" />  utrium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/UO.jpg" alt="utrium oxide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            5
+        </td>
+        <td>
+            35
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +400% harvest effectiveness
+        </td>
+        <td>
+            380
+        </td>
+        <td>
+            12
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 3 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/KH2O.jpg" alt="keanium acid" />  keanium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/KH.jpg" alt="keanium hydride" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            5
+        </td>
+        <td>
+            35
+        </td>
+        <td>
+            <b>CARRY</b>
+        </td>
+        <td>
+            +100 capacity
+        </td>
+        <td>
+            80
+        </td>
+        <td>
+            6
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 4 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/KHO2.jpg" alt="keanium alkalide" />  keanium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/KO.jpg" alt="keanium oxide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            5
+        </td>
+        <td>
+            35
+        </td>
+        <td>
+            <b>RANGED_ATTACK</b>
+        </td>
+        <td>
+            +200% rangedAttack and rangedMassAttack effectiveness
+        </td>
+        <td>
+            280
+        </td>
+        <td>
+            6
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 5 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/LH2O.jpg" alt="lemergium acid" />  lemergium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/LH.jpg" alt="lemergium hydride" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            10
+        </td>
+        <td>
+            45
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +80% repair and build effectiveness without increasing the energy cost
+        </td>
+        <td>
+            Build: 3.980 / Repair: 780 (Based on 1K work ticks)
+        </td>
+        <td>
+            0
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 6 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/LHO2.jpg" alt="lemergium alkalide" />  lemergium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/LO.jpg" alt="lemergium oxide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            5
+        </td>
+        <td>
+            35
+        </td>
+        <td>
+            <b>HEAL</b>
+        </td>
+        <td>
+            +200% heal and rangedHeal effectiveness
+        </td>
+        <td>
+            480
+        </td>
+        <td>
+            6
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 7 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/ZH2O.jpg" alt="zynthium acid" />  zynthium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/ZH.jpg" alt="zynthium oxide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            40
+        </td>
+        <td>
+            70
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +200% dismantle effectiveness
+        </td>
+        <td>
+            180
+        </td>
+        <td>
+            6
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 8 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/ZHO2.jpg" alt="zynthium alkalide" />  zynthium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/ZH.jpg" alt="zynthium hydride" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            5
+        </td>
+        <td>
+            35
+        </td>
+        <td>
+            <b>MOVE</b>
+        </td>
+        <td>
+            +200% fatigue decrease speed
+        </td>
+        <td>
+            80
+        </td>
+        <td>
+            6
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 9 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/GH2O.jpg" alt="ghodium acid" />  ghodium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/GH.jpg" alt="ghodium hydride" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            15
+        </td>
+        <td>
+            50
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +80% upgradeController effectiveness without increasing the energy cost
+        </td>
+        <td>
+            Upgrade: 780 (Based on 1K work ticks)
+        </td>
+        <td>
+            0
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 10 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/GHO2.jpg" alt="ghodium alkalide" />  ghodium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/GO.jpg" alt="ghodium oxide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/OH.jpg" alt="hydroxide" />
+        </td>
+        <td>
+            30
+        </td>
+        <td>
+            65
+        </td>
+        <td>
+            <b>TOUGH</b>
+        </td>
+        <td>
+            -50% damage taken
+        </td>
+        <td>
+            -20
+        </td>
+        <td>
+            0
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Tier 3 Header -->
+    <tr style="background-color: grey">
+        <td align="center" colspan="10"><b>Tier 3 Compounds</b></td>
+    </tr>
+
+    <!-- Table Headers -->
+    <tr>
+        <th>Name</th>
+        <th>Formula</th>
+        <th>Time In Ticks</th>
+        <th>Total Time In Ticks</th>
+        <th>Body Part</th>
+        <th>Effect</th>
+        <th>Energy Saved With Each Boost</th>
+        <th>SpawnTime Saved With Each Boost In Ticks</th>
+        <th>Credit Cost With Each Boost Build From Raw</th>
+        <th>Energy Saved / Credit Cost * Energy Price</th>
+    </tr>
+
+    <!-- Reaction 1 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XUHO2.jpg" alt="catalyzed utrium acid" />  catalyzed utrium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/UH2O.jpg" alt="utrium acid" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            60
+        </td>
+        <td>
+            95
+        </td>
+        <td>
+            <b>ATTACK</b>
+        </td>
+        <td>
+            +300% attack effectiveness
+        </td>
+        <td>
+            220
+        </td>
+        <td>
+            9
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 2 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XUHO2.jpg" alt="catalyzed utrium alkalide" />  catalyzed utrium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/UHO2.jpg" alt="utrium alkalide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            60
+        </td>
+        <td>
+            95
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +600% harvest effectiveness
+        </td>
+        <td>
+            580
+        </td>
+        <td>
+            18
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 3 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XKH2O.jpg" alt="catalyzed keanium acid" />  catalyzed keanium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/KH2O.jpg" alt="keanium acid" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            60
+        </td>
+        <td>
+            95
+        </td>
+        <td>
+            <b>CARRY</b>
+        </td>
+        <td>
+            +150 capacity
+        </td>
+        <td>
+            130
+        </td>
+        <td>
+            9
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 4 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XKHO2.jpg" alt="keanium alkalide" />  catalyzed keanium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/KHO2.jpg" alt="keanium alkalide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            60
+        </td>
+        <td>
+            95
+        </td>
+        <td>
+            <b>RANGED_ATTACK</b>
+        </td>
+        <td>
+            +300% rangedAttack and rangedMassAttack effectiveness
+        </td>
+        <td>
+            430
+        </td>
+        <td>
+            9
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 5 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XLH2O.jpg" alt="catalyzed lemergium acid" />  catalyzed lemergium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/LH2O.jpg" alt="lemergium acid" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            65
+        </td>
+        <td>
+            110
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +100% repair and build effectiveness without increasing the energy cost
+        </td>
+        <td>
+            Build: 4.980 / Repair: 980 (Based on 1K work ticks)
+        </td>
+        <td>
+            0
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 6 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XLHO2.jpg" alt="catalyzed lemergium alkalide" />  catalyzed lemergium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/LHO2.jpg" alt="lemergium alkalide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            60
+        </td>
+        <td>
+            95
+        </td>
+        <td>
+            <b>HEAL</b>
+        </td>
+        <td>
+            +300% heal and rangedHeal effectiveness
+        </td>
+        <td>
+            730
+        </td>
+        <td>
+            9
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 7 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XZH2O.jpg" alt="catalyzed zynthium acid" />  catalyzed zynthium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/ZH2O.jpg" alt="zynthium acid" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            160
+        </td>
+        <td>
+            230
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +300% dismantle effectiveness
+        </td>
+        <td>
+            280
+        </td>
+        <td>
+            9
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 8 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XZHO2.jpg" alt="catalyzed zynthium alkalide" />  catalyzed zynthium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/ZHO2.jpg" alt="zynthium alkalide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            60
+        </td>
+        <td>
+            95
+        </td>
+        <td>
+            <b>MOVE</b>
+        </td>
+        <td>
+            +300% fatigue decrease speed
+        </td>
+        <td>
+            130
+        </td>
+        <td>
+            9
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 9 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XGH2O.jpg" alt="ghodium acid" />  catalyzed ghodium acid
+        </td>
+        <td>
+            <img src="~/images/reactions/GH2O.jpg" alt="ghodium acid" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            80
+        </td>
+        <td>
+            130
+        </td>
+        <td>
+            <b>WORK</b>
+        </td>
+        <td>
+            +100% upgradeController effectiveness without increasing the energy cost
+        </td>
+        <td>
+            Upgrade: 980 (Based on 1K work ticks)
+        </td>
+        <td>
+            0
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+
+    <!-- Reaction 10 -->
+    <tr>
+        <td>
+            <img src="~/images/reactions/XGHO2.jpg" alt="catalyzed ghodium alkalide" />  catalyzed ghodium alkalide
+        </td>
+        <td>
+            <img src="~/images/reactions/GHO2.jpg" alt="ghodium alkalide" style="padding: 0px" />
+            +
+            <img src="~/images/reactions/X.png" alt="catalyst" />
+        </td>
+        <td>
+            150
+        </td>
+        <td>
+            215
+        </td>
+        <td>
+            <b>TOUGH</b>
+        </td>
+        <td>
+            -50% damage taken
+        </td>
+        <td>
+            -20
+        </td>
+        <td>
+            0
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+</table>
+
+<p style="padding: 50px 10px 25px 10px">
+    <b>All market prices are a 7day average from 29-8-2020, they can differ from current prices. In this calculation are minerals being used as cost.</b>
+</p>
+
+<table class="table" style="max-width:50%">
+    <tr>
+        <th align="center" colspan="2">Prices used</th>
+    </tr>
+    @foreach (string[] resource in Model.Minerals)
+    {
+
+        <tr>
+            <th>
+                @resource[0]
+            </th>
+            <td>
+                @resource[1]
+            </td>
+        </tr>
+    }
 </table>
 
 
