@@ -7,9 +7,9 @@ namespace ScreepsWebsite.Models
 {
     static public class CompoundPrices
     {
-        public static int GetCreditCost(object[] compound)
+        public static double GetCreditCost(object[] compound)
         {
-            int creditCost = 0;
+            double creditCost = 0;
 
 
             foreach (string[] mineral in compound)
@@ -44,64 +44,64 @@ namespace ScreepsWebsite.Models
                 }
             }
 
-            return creditCost;
+            return Math.Round(creditCost * 15, 2);
         }
 
         // Base Compounds
-        public static int Hydroxide = GetCreditCost(CompoundMineralsNeeded.Hydroxide);
-        public static int ZynthiumKeanite = GetCreditCost(CompoundMineralsNeeded.ZynthiumKeanite);
-        public static int UtriumLemergite = GetCreditCost(CompoundMineralsNeeded.UtriumLemergite);
-        public static int Ghodium = GetCreditCost(CompoundMineralsNeeded.Ghodium);
+        public static double Hydroxide = GetCreditCost(CompoundMineralsNeeded.Hydroxide);
+        public static double ZynthiumKeanite = GetCreditCost(CompoundMineralsNeeded.ZynthiumKeanite);
+        public static double UtriumLemergite = GetCreditCost(CompoundMineralsNeeded.UtriumLemergite);
+        public static double Ghodium = GetCreditCost(CompoundMineralsNeeded.Ghodium);
 
 
         // Tier 1 Compounds //
-        public static int UtriumHydride = GetCreditCost(CompoundMineralsNeeded.UtriumHydride);
-        public static int UtriumOxide = GetCreditCost(CompoundMineralsNeeded.UtriumOxide);
+        public static double UtriumHydride = GetCreditCost(CompoundMineralsNeeded.UtriumHydride);
+        public static double UtriumOxide = GetCreditCost(CompoundMineralsNeeded.UtriumOxide);
 
-        public static int KeaniumHydride = GetCreditCost(CompoundMineralsNeeded.KeaniumHydride);
-        public static int KeaniumOxide = GetCreditCost(CompoundMineralsNeeded.KeaniumOxide);
+        public static double KeaniumHydride = GetCreditCost(CompoundMineralsNeeded.KeaniumHydride);
+        public static double KeaniumOxide = GetCreditCost(CompoundMineralsNeeded.KeaniumOxide);
 
-        public static int LemergiumHydride = GetCreditCost(CompoundMineralsNeeded.LemergiumHydride);
-        public static int LemergiumOxide = GetCreditCost(CompoundMineralsNeeded.LemergiumOxide);
+        public static double LemergiumHydride = GetCreditCost(CompoundMineralsNeeded.LemergiumHydride);
+        public static double LemergiumOxide = GetCreditCost(CompoundMineralsNeeded.LemergiumOxide);
 
-        public static int ZynthiumHydride = GetCreditCost(CompoundMineralsNeeded.ZynthiumHydride);
-        public static int ZynthiumOxide = GetCreditCost(CompoundMineralsNeeded.ZynthiumOxide);
+        public static double ZynthiumHydride = GetCreditCost(CompoundMineralsNeeded.ZynthiumHydride);
+        public static double ZynthiumOxide = GetCreditCost(CompoundMineralsNeeded.ZynthiumOxide);
 
-        public static int GhodiumHydride = GetCreditCost(CompoundMineralsNeeded.GhodiumHydride);
-        public static int GhodiumOxide = GetCreditCost(CompoundMineralsNeeded.GhodiumOxide);
+        public static double GhodiumHydride = GetCreditCost(CompoundMineralsNeeded.GhodiumHydride);
+        public static double GhodiumOxide = GetCreditCost(CompoundMineralsNeeded.GhodiumOxide);
 
 
         // Tier 2 Compounds //
-        public static int UtriumAcid = GetCreditCost(CompoundMineralsNeeded.UtriumAcid);
-        public static int UtriumAlkalide = GetCreditCost(CompoundMineralsNeeded.UtriumAlkalide);
+        public static double UtriumAcid = GetCreditCost(CompoundMineralsNeeded.UtriumAcid);
+        public static double UtriumAlkalide = GetCreditCost(CompoundMineralsNeeded.UtriumAlkalide);
 
-        public static int KeaniumAcid = GetCreditCost(CompoundMineralsNeeded.KeaniumAcid);
-        public static int KeaniumAlkalide = GetCreditCost(CompoundMineralsNeeded.KeaniumAlkalide);
+        public static double KeaniumAcid = GetCreditCost(CompoundMineralsNeeded.KeaniumAcid);
+        public static double KeaniumAlkalide = GetCreditCost(CompoundMineralsNeeded.KeaniumAlkalide);
 
-        public static int LemergiumAcid = GetCreditCost(CompoundMineralsNeeded.LemergiumAcid);
-        public static int LemergiumAlkalide = GetCreditCost(CompoundMineralsNeeded.LemergiumAlkalide);
+        public static double LemergiumAcid = GetCreditCost(CompoundMineralsNeeded.LemergiumAcid);
+        public static double LemergiumAlkalide = GetCreditCost(CompoundMineralsNeeded.LemergiumAlkalide);
 
-        public static int ZynthiumAcid = GetCreditCost(CompoundMineralsNeeded.ZynthiumAcid);
-        public static int ZynthiumAlkalide = GetCreditCost(CompoundMineralsNeeded.ZynthiumAlkalide);
+        public static double ZynthiumAcid = GetCreditCost(CompoundMineralsNeeded.ZynthiumAcid);
+        public static double ZynthiumAlkalide = GetCreditCost(CompoundMineralsNeeded.ZynthiumAlkalide);
 
-        public static int GhodiumAcid = GetCreditCost(CompoundMineralsNeeded.GhodiumAcid);
-        public static int GhodiumAlkalide = GetCreditCost(CompoundMineralsNeeded.GhodiumAlkalide);
+        public static double GhodiumAcid = GetCreditCost(CompoundMineralsNeeded.GhodiumAcid);
+        public static double GhodiumAlkalide = GetCreditCost(CompoundMineralsNeeded.GhodiumAlkalide);
 
 
         // Tier 3 Compounds //
-        public static int CatalyzedUtriumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedUtriumAcid);
-        public static int CatalyzedUtriumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedUtriumAlkalide);
+        public static double CatalyzedUtriumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedUtriumAcid);
+        public static double CatalyzedUtriumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedUtriumAlkalide);
 
-        public static int CatalyzedKeaniumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedKeaniumAcid);
-        public static int CatalyzedKeaniumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedKeaniumAlkalide);
+        public static double CatalyzedKeaniumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedKeaniumAcid);
+        public static double CatalyzedKeaniumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedKeaniumAlkalide);
 
-        public static int CatalyzedLemergiumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedLemergiumAcid);
-        public static int CatalyzedLemergiumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedLemergiumAlkalide);
+        public static double CatalyzedLemergiumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedLemergiumAcid);
+        public static double CatalyzedLemergiumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedLemergiumAlkalide);
 
-        public static int CatalyzedZynthiumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedZynthiumAcid);
-        public static int CatalyzedZynthiumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedZynthiumAlkalide);
+        public static double CatalyzedZynthiumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedZynthiumAcid);
+        public static double CatalyzedZynthiumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedZynthiumAlkalide);
 
-        public static int CatalyzedGhodiumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedGhodiumAcid);
-        public static int CatalyzedGhodiumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedGhodiumAlkalide);
+        public static double CatalyzedGhodiumAcid = GetCreditCost(CompoundMineralsNeeded.CatalyzedGhodiumAcid);
+        public static double CatalyzedGhodiumAlkalide = GetCreditCost(CompoundMineralsNeeded.CatalyzedGhodiumAlkalide);
     }
 }

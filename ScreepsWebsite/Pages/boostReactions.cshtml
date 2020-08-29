@@ -285,7 +285,7 @@
         </td>
         <td>
             @{
-                int compoundPrice = CompoundPrices.UtriumHydride;
+                double compoundPrice = CompoundPrices.UtriumHydride;
                 double energyPrice = EnergyPrice.Energy;
                 double ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
             }
@@ -328,7 +328,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumOxide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(180 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -369,7 +369,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumHydride;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(30 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -410,7 +410,7 @@
             @{
                 compoundPrice = CompoundPrices.KeaniumOxide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(130 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -451,9 +451,11 @@
             @{
                 compoundPrice = CompoundPrices.LemergiumHydride;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(2480 - (compoundPrice / energyPrice), 2);
+                double ratio2 = Math.Round(480 - (compoundPrice / energyPrice), 2);
             }
-            @ratio
+            Build: @ratio
+            Repair: @ratio2
         </td>
     </tr>
 
@@ -716,7 +718,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(140 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -757,7 +759,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(880 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -798,7 +800,7 @@
             @{
                 compoundPrice = CompoundPrices.KeaniumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(80 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -839,7 +841,7 @@
             @{
                 compoundPrice = CompoundPrices.KeaniumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(280 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -880,9 +882,11 @@
             @{
                 compoundPrice = CompoundPrices.LemergiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(3980 - (compoundPrice / energyPrice), 2);
+                ratio2 = Math.Round(780 - (compoundPrice / energyPrice), 2);
             }
-            @ratio
+            Build: @ratio
+            Repair: @ratio2
         </td>
     </tr>
 
@@ -921,7 +925,7 @@
             @{
                 compoundPrice = CompoundPrices.LemergiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(480 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -962,7 +966,7 @@
             @{
                 compoundPrice = CompoundPrices.ZynthiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(180 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1003,7 +1007,7 @@
             @{
                 compoundPrice = CompoundPrices.ZynthiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(80 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1044,7 +1048,7 @@
             @{
                 compoundPrice = CompoundPrices.GhodiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(780 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1085,7 +1089,7 @@
             @{
                 compoundPrice = CompoundPrices.GhodiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(-20 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1145,7 +1149,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedUtriumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(220 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1186,7 +1190,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedUtriumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(580 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1227,7 +1231,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedKeaniumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(130 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1268,7 +1272,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedKeaniumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(430 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1309,9 +1313,11 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedLemergiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(4980 - (compoundPrice / energyPrice), 2);
+                ratio2 = Math.Round(980 - (compoundPrice / energyPrice), 2);
             }
-            @ratio
+            Build: @ratio
+            Repair: @ratio2
         </td>
     </tr>
 
@@ -1350,7 +1356,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedLemergiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(730 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1391,7 +1397,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedZynthiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(280 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1432,7 +1438,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedZynthiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(130 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1473,7 +1479,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedGhodiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(980 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1514,7 +1520,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedGhodiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(-20 - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
