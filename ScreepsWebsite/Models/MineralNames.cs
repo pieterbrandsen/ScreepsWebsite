@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ScreepsWebsite.Models
 {
-    static public class MineralNames
+    public class MineralNames
     {
         public const string Hydrogen = "Hydrogen";
         public const string Oxygen = "Oxygen";

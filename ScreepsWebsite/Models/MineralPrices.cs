@@ -5,14 +5,18 @@ using System.Threading.Tasks;
 
 namespace ScreepsWebsite.Models
 {
+    static public class EnergyPrice
+    {
+        public const double Energy = 0.05;
+    }
     static public class MineralPrices
     {
         public const int Hydrogen = 1;
-        public const int Oxygen = 2;
-        public const int Utrium = 3;
-        public const int Keanium = 4;
-        public const int Lemergium = 5;
-        public const int Zynthium = 6;
-        public const int Catalyst = 7;
+        public const int Oxygen = 1;
+        public const int Utrium = 1;
+        public const int Keanium = 1;
+        public const int Lemergium = 1;
+        public const int Zynthium = 1;
+        public const int Catalyst = 1;
     }
 }

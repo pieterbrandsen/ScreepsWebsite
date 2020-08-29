@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ScreepsWebsite.Pages
 {
-    public class remoteRoomCalculatorModel : PageModel
+    public class RemoteRoomCalculatorModel : PageModel
     {
         public void OnGet()
         {
