@@ -275,7 +275,7 @@
             +100% attack effectiveness
         </td>
         <td>
-            60
+            @CompoundEnergySaved.UtriumHydride
         </td>
         <td>
             3
@@ -287,7 +287,7 @@
             @{
                 double compoundPrice = CompoundPrices.UtriumHydride;
                 double energyPrice = EnergyPrice.Energy;
-                double ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                double ratio = Math.Round(@CompoundEnergySaved.UtriumHydride - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -316,7 +316,7 @@
             +200% harvest effectiveness
         </td>
         <td>
-            180
+            @CompoundEnergySaved.UtriumOxide
         </td>
         <td>
             6
@@ -328,7 +328,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumOxide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(180 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.UtriumOxide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -357,7 +357,7 @@
             +50 capacity
         </td>
         <td>
-            30
+            @CompoundEnergySaved.UtriumHydride
         </td>
         <td>
             3
@@ -369,7 +369,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumHydride;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(30 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.UtriumHydride - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -398,7 +398,7 @@
             +100% rangedAttack and rangedMassAttack effectiveness
         </td>
         <td>
-            130
+            @CompoundEnergySaved.KeaniumOxide
         </td>
         <td>
             3
@@ -410,7 +410,7 @@
             @{
                 compoundPrice = CompoundPrices.KeaniumOxide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(130 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.KeaniumOxide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -439,7 +439,7 @@
             +50% repair and build effectiveness without increasing the energy cost
         </td>
         <td>
-            Build: 2.480 / Repair: 480 (Based on 1K work ticks)
+            @CompoundEnergySaved.LemergiumHydride[0]
         </td>
         <td>
             0
@@ -451,8 +451,8 @@
             @{
                 compoundPrice = CompoundPrices.LemergiumHydride;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(2480 - (compoundPrice / energyPrice), 2);
-                double ratio2 = Math.Round(480 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(Int32.Parse(@CompoundEnergySaved.LemergiumHydride[1]) - (compoundPrice / energyPrice), 2);
+                double ratio2 = Math.Round(Int32.Parse(@CompoundEnergySaved.LemergiumHydride[2]) - (compoundPrice / energyPrice), 2);
             }
             Build: @ratio
             Repair: @ratio2
@@ -482,7 +482,7 @@
             +100% heal and rangedHeal effectiveness
         </td>
         <td>
-            230
+            @CompoundEnergySaved.LemergiumOxide
         </td>
         <td>
             3
@@ -494,7 +494,7 @@
             @{
                 compoundPrice = CompoundPrices.LemergiumOxide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.LemergiumOxide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -523,7 +523,7 @@
             +100% dismantle effectiveness
         </td>
         <td>
-            80
+            @CompoundEnergySaved.ZynthiumHydride
         </td>
         <td>
             3
@@ -535,7 +535,7 @@
             @{
                 compoundPrice = CompoundPrices.ZynthiumHydride;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.ZynthiumHydride - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -564,7 +564,7 @@
             +100% fatigue decrease speed
         </td>
         <td>
-            30
+            @CompoundEnergySaved.ZynthiumOxide
         </td>
         <td>
             3
@@ -576,7 +576,7 @@
             @{
                 compoundPrice = CompoundPrices.ZynthiumOxide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.ZynthiumOxide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -605,7 +605,7 @@
             +50% upgradeController effectiveness without increasing the energy cost
         </td>
         <td>
-            Upgrade: 480 (Based on 1K work ticks)
+            @CompoundEnergySaved.GhodiumHydride[0]
         </td>
         <td>
             0
@@ -617,7 +617,7 @@
             @{
                 compoundPrice = CompoundPrices.GhodiumHydride;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(Int32.Parse(@CompoundEnergySaved.GhodiumHydride[1]) - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -646,7 +646,7 @@
             -30% damage taken
         </td>
         <td>
-            -20
+            @CompoundEnergySaved.GhodiumOxide
         </td>
         <td>
             0
@@ -658,7 +658,7 @@
             @{
                 compoundPrice = CompoundPrices.GhodiumOxide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(60 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.GhodiumOxide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -706,7 +706,7 @@
             +200% attack effectiveness
         </td>
         <td>
-            140
+            @CompoundEnergySaved.UtriumAcid
         </td>
         <td>
             6
@@ -718,7 +718,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(140 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.UtriumAcid - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -747,7 +747,7 @@
             +400% harvest effectiveness
         </td>
         <td>
-            380
+            @CompoundEnergySaved.UtriumAlkalide
         </td>
         <td>
             12
@@ -759,7 +759,7 @@
             @{
                 compoundPrice = CompoundPrices.UtriumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(880 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.UtriumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -788,7 +788,7 @@
             +100 capacity
         </td>
         <td>
-            80
+            @CompoundEnergySaved.KeaniumAcid
         </td>
         <td>
             6
@@ -800,7 +800,7 @@
             @{
                 compoundPrice = CompoundPrices.KeaniumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(80 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.KeaniumAcid - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -829,7 +829,7 @@
             +200% rangedAttack and rangedMassAttack effectiveness
         </td>
         <td>
-            280
+            @CompoundEnergySaved.KeaniumAlkalide
         </td>
         <td>
             6
@@ -841,7 +841,7 @@
             @{
                 compoundPrice = CompoundPrices.KeaniumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(280 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.KeaniumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -870,7 +870,7 @@
             +80% repair and build effectiveness without increasing the energy cost
         </td>
         <td>
-            Build: 3.980 / Repair: 780 (Based on 1K work ticks)
+            @CompoundEnergySaved.LemergiumAcid[0]
         </td>
         <td>
             0
@@ -882,8 +882,8 @@
             @{
                 compoundPrice = CompoundPrices.LemergiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(3980 - (compoundPrice / energyPrice), 2);
-                ratio2 = Math.Round(780 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(Int32.Parse(@CompoundEnergySaved.LemergiumAcid[1]) - (compoundPrice / energyPrice), 2);
+                ratio2 = Math.Round(Int32.Parse(@CompoundEnergySaved.LemergiumAcid[2]) - (compoundPrice / energyPrice), 2);
             }
             Build: @ratio
             Repair: @ratio2
@@ -913,7 +913,7 @@
             +200% heal and rangedHeal effectiveness
         </td>
         <td>
-            480
+            @CompoundEnergySaved.LemergiumAlkalide
         </td>
         <td>
             6
@@ -925,7 +925,7 @@
             @{
                 compoundPrice = CompoundPrices.LemergiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(480 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.LemergiumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -954,7 +954,7 @@
             +200% dismantle effectiveness
         </td>
         <td>
-            180
+            @CompoundEnergySaved.ZynthiumAcid
         </td>
         <td>
             6
@@ -966,7 +966,7 @@
             @{
                 compoundPrice = CompoundPrices.ZynthiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(180 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.ZynthiumAcid - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -995,7 +995,7 @@
             +200% fatigue decrease speed
         </td>
         <td>
-            80
+            @CompoundEnergySaved.ZynthiumAlkalide
         </td>
         <td>
             6
@@ -1007,7 +1007,7 @@
             @{
                 compoundPrice = CompoundPrices.ZynthiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(80 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.ZynthiumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1036,7 +1036,7 @@
             +80% upgradeController effectiveness without increasing the energy cost
         </td>
         <td>
-            Upgrade: 780 (Based on 1K work ticks)
+            @CompoundEnergySaved.GhodiumAcid[0]
         </td>
         <td>
             0
@@ -1048,7 +1048,7 @@
             @{
                 compoundPrice = CompoundPrices.GhodiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(780 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(Int32.Parse(@CompoundEnergySaved.GhodiumAcid[1]) - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1077,7 +1077,7 @@
             -50% damage taken
         </td>
         <td>
-            -20
+            @CompoundEnergySaved.GhodiumAlkalide
         </td>
         <td>
             0
@@ -1089,7 +1089,7 @@
             @{
                 compoundPrice = CompoundPrices.GhodiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(-20 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.GhodiumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1137,7 +1137,7 @@
             +300% attack effectiveness
         </td>
         <td>
-            220
+            @CompoundEnergySaved.CatalyzedUtriumAcid
         </td>
         <td>
             9
@@ -1149,7 +1149,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedUtriumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(220 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedUtriumAcid - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1178,7 +1178,7 @@
             +600% harvest effectiveness
         </td>
         <td>
-            580
+            @CompoundEnergySaved.CatalyzedUtriumAlkalide
         </td>
         <td>
             18
@@ -1190,7 +1190,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedUtriumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(580 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedUtriumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1219,7 +1219,7 @@
             +150 capacity
         </td>
         <td>
-            130
+            @CompoundEnergySaved.CatalyzedKeaniumAcid
         </td>
         <td>
             9
@@ -1231,7 +1231,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedKeaniumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(130 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedKeaniumAcid - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1260,7 +1260,7 @@
             +300% rangedAttack and rangedMassAttack effectiveness
         </td>
         <td>
-            430
+            @CompoundEnergySaved.CatalyzedKeaniumAlkalide
         </td>
         <td>
             9
@@ -1272,7 +1272,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedKeaniumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(430 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedKeaniumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1301,7 +1301,7 @@
             +100% repair and build effectiveness without increasing the energy cost
         </td>
         <td>
-            Build: 4.980 / Repair: 980 (Based on 1K work ticks)
+            @CompoundEnergySaved.CatalyzedLemergiumAcid[0]
         </td>
         <td>
             0
@@ -1313,8 +1313,8 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedLemergiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(4980 - (compoundPrice / energyPrice), 2);
-                ratio2 = Math.Round(980 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(Int32.Parse(@CompoundEnergySaved.CatalyzedLemergiumAcid[1]) - (compoundPrice / energyPrice), 2);
+                ratio2 = Math.Round(Int32.Parse(@CompoundEnergySaved.CatalyzedLemergiumAcid[2]) - (compoundPrice / energyPrice), 2);
             }
             Build: @ratio
             Repair: @ratio2
@@ -1344,7 +1344,7 @@
             +300% heal and rangedHeal effectiveness
         </td>
         <td>
-            730
+            @CompoundEnergySaved.CatalyzedLemergiumAlkalide
         </td>
         <td>
             9
@@ -1356,7 +1356,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedLemergiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(730 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedLemergiumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1385,7 +1385,7 @@
             +300% dismantle effectiveness
         </td>
         <td>
-            280
+            @CompoundEnergySaved.CatalyzedZynthiumAcid
         </td>
         <td>
             9
@@ -1397,7 +1397,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedZynthiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(280 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedZynthiumAcid - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1426,7 +1426,7 @@
             +300% fatigue decrease speed
         </td>
         <td>
-            130
+            @CompoundEnergySaved.CatalyzedZynthiumAlkalide
         </td>
         <td>
             9
@@ -1438,7 +1438,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedZynthiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(130 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedZynthiumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1467,7 +1467,7 @@
             +100% upgradeController effectiveness without increasing the energy cost
         </td>
         <td>
-            Upgrade: 980 (Based on 1K work ticks)
+            @CompoundEnergySaved.CatalyzedGhodiumAcid[0]
         </td>
         <td>
             0
@@ -1479,7 +1479,7 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedGhodiumAcid;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(980 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(Int32.Parse(@CompoundEnergySaved.CatalyzedGhodiumAcid[1]) - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
@@ -1508,7 +1508,7 @@
             -50% damage taken
         </td>
         <td>
-            -20
+            @CompoundEnergySaved.CatalyzedGhodiumAlkalide
         </td>
         <td>
             0
@@ -1520,12 +1520,16 @@
             @{
                 compoundPrice = CompoundPrices.CatalyzedGhodiumAlkalide;
                 energyPrice = EnergyPrice.Energy;
-                ratio = Math.Round(-20 - (compoundPrice / energyPrice), 2);
+                ratio = Math.Round(@CompoundEnergySaved.CatalyzedGhodiumAlkalide - (compoundPrice / energyPrice), 2);
             }
             @ratio
         </td>
     </tr>
 </table>
+
+
+
+
 
 <p style="padding: 50px 10px 50px">
     <h2>Some more details about the table</h2>
