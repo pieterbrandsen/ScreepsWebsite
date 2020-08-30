@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ScreepsWebsite.Pages
 {
-    public class creepSizeCalculatorModel : PageModel
+    public class CreepSizeCalculatorModel : PageModel
     {
         public void OnGet()
         {

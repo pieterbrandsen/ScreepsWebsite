@@ -2,3 +2,316 @@
 @model ScreepsWebsite.Pages.RemoteRoomCalculatorModel
 @{
 }
+
+<style type="text/css">
+    .form-style-2 {
+        max-width: 500px;
+        padding: 20px 12px 10px 20px;
+        font: 13px Arial, Helvetica, sans-serif;
+    }
+
+    .form-style-2-heading {
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 20px;
+        font-size: 15px;
+        padding-bottom: 3px;
+    }
+
+    .form-style-2 label {
+        display: block;
+        margin: 0px 0px 15px 0px;
+    }
+
+        .form-style-2 label > span {
+            width: 200px;
+            font-weight: bold;
+            float: left;
+            padding-top: 8px;
+            padding-right: 10px;
+        }
+
+    .form-style-2 span.required {
+        color: red;
+    }
+
+    .form-style-2 .tel-number-field {
+        width: 40px;
+        text-align: center;
+    }
+
+    .form-style-2 input.input-field, .form-style-2 .select-field {
+        width: 48%;
+    }
+
+    .form-style-2 input.input-field,
+    .form-style-2 .tel-number-field,
+    .form-style-2 .textarea-field,
+    .form-style-2 .select-field {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        border: 1px solid #C2C2C2;
+        box-shadow: 1px 1px 4px #EBEBEB;
+        -moz-box-shadow: 1px 1px 4px #EBEBEB;
+        -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        padding: 7px;
+        outline: none;
+    }
+
+        .form-style-2 .input-field:focus,
+        .form-style-2 .tel-number-field:focus,
+        .form-style-2 .textarea-field:focus,
+        .form-style-2 .select-field:focus {
+            border: 1px solid #0C0;
+        }
+
+    .form-style-2 .textarea-field {
+        height: 100px;
+        width: 55%;
+    }
+
+    .form-style-2 input[type=submit],
+    .form-style-2 input[type=button] {
+        border: none;
+        padding: 8px 15px 8px 15px;
+        background: #FF8500;
+        color: #fff;
+        box-shadow: 1px 1px 4px #DADADA;
+        -moz-box-shadow: 1px 1px 4px #DADADA;
+        -webkit-box-shadow: 1px 1px 4px #DADADA;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+    }
+
+        .form-style-2 input[type=submit]:hover,
+        .form-style-2 input[type=button]:hover {
+            background: #EA7B00;
+            color: #fff;
+        }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+
+<h2>Please fill in your information</h2>
+<div class="form-style-2">
+    <form action="/remoteRoomCalculator">
+        <div class="form-style-2-heading">Room Information</div>
+        <label for="isRoomReserved"><span>is the room reserved? <span class="required">*</span></span><input type="checkbox" class="input-field" name="isRoomReserved" checked /></label>
+        <label for="sourceAmount"><span>How many sources are in the room? <span class="required">*</span></span><input required type="number" class="input-field" name="sourceAmount" value="@Model.sourceAmount" /></label>
+        <label for="averageRange"><span>What is the average range to the sources <span class="required">*</span></span><input required type="number" class="input-field" name="averageRange" /></label>
+
+        <br />
+        <div class="form-style-2-heading">Creep Body Information</div>
+        <label for="transfererCarryCount"><span>What is the total transferer carry count? <span class="required">*</span></span><input type="number" class="input-field" name="transfererCarryCount" /></label>
+        <label for="harvesterWorkCount"><span>What is the total harvester work count? <span class="required">*</span></span><input type="number" class="input-field" name="harvesterWorkCount" /></label>
+        <label for="reserverClaimCount"><span>What is the total reserver claim count? <span class="required">*</span></span><input type="number" class="input-field" name="reserverClaimCount" /></label>
+
+        <br />
+        <div class="form-style-2-heading">Energy Cost</div>
+        <label for="transfererCost"><span>What is the total transferer creeps cost? <span class="required">*</span></span><input type="number" class="input-field" name="transfererCost" /></label>
+        <label for="harvesterCost"><span>What is the total harvester creeps cost? <span class="required">*</span></span><input type="number" class="input-field" name="harvesterCost" /></label>
+        <label for="reserverCost"><span>What is the total reserver creeps cost? <span class="required">*</span></span><input type="number" class="input-field" name="reserverCost" /></label>
+
+        
+        <input type="submit" value="Submit" onclick="@Model.GetData()" />
+    </form>
+</div>
+
+<br style="margin-bottom: 10%" />
+
+
+@if (Model.optimalHasData)
+{
+    <h1>Results</h1>
+    <div>
+        <table class="table">
+            @if (Model.inputHasData)
+            {
+                @*Input Room Performance*@
+                <tr>
+                    <th colspan="2" align="center">Input Room Performance</th>
+                </tr>
+                @*Input Creep Body*@
+                <tr>
+                    <th>
+                        Input Transferer Body
+                    </th>
+                    <td>
+                        Carry: @Model.inputTransfererBody[0],
+                        MOVE: @Model.inputTransfererBody[1]
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Input Harvester Body
+                    </th>
+                    <td>
+                        WORK: @Model.inputHarvesterBody[0],
+                        MOVE: @Model.inputHarvesterBody[1],
+                        Carry: @Model.inputHarvesterBody[2]
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Input Reserver Body
+                    </th>
+                    <td>
+                        CLAIM: @Model.inputReserverBody[0],
+                        MOVE: @Model.inputReserverBody[1]
+                    </td>
+                </tr>
+
+                @*Input Creep Cost Each Tick*@
+                <tr>
+                    <th>
+                        Input Total Creep Expenses Each Tick
+                    </th>
+                    <td>
+                        @Math.Round(Model.inputTotalCreepCostEachTick, 2) energy
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Input Transferer Cost Each Tick
+                    </th>
+                    <td>
+                        @Model.inputTransfererCreepCostEachTick energy
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Input Harvester Cost Each Tick
+                    </th>
+                    <td>
+                        @Model.inputHarvesterCreepsCostEachTick energy
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Input Reserver Cost Each Tick
+                    </th>
+                    <td>
+                        @Model.inputReserverCreepCostEachTick energy
+                    </td>
+                </tr>
+
+                @*Input Income/Expense*@
+                <tr>
+                    <th>
+                        Input Profit Each Tick
+                    </th>
+                    <td>
+                        @{
+                            double inputProfitNumber = Model.inputEnergyEachTick - Model.inputTotalCreepCostEachTick;
+                            double inputProfitPercentage = Math.Abs(Math.Round((Model.inputTotalCreepCostEachTick / Model.inputEnergyEachTick - 1) * 100, 2));
+                        }
+                        @inputProfitNumber / @inputProfitPercentage%
+                    </td>
+                </tr>
+            }
+
+
+            @*Optimal Room Performance*@
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <th colspan="2" align="center">Optimal Room Performance</th>
+            </tr>
+            @*Optimal Creep Body*@
+            <tr>
+                <th>
+                    Optimal Transferer Body
+                </th>
+                <td>
+                    CARRY: @Model.optimalTransfererBody[0],
+                    MOVE: @Model.optimalTransfererBody[1]
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Optimal Harvester Body
+                </th>
+                <td>
+                    WORK: @Model.optimalHarvesterBody[0],
+                    MOVE: @Model.optimalHarvesterBody[1],
+                    CARRY: @Model.optimalHarvesterBody[2]
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Optimal Reserver Body
+                </th>
+                <td>
+                    CLAIM: @Model.optimalReserverBody[0],
+                    MOVE: @Model.optimalReserverBody[1]
+                </td>
+            </tr>
+
+            @*Optimal Creep Cost Each Tick*@
+            <tr>
+                <th>
+                    Optimal Total Creep Expenses Each Tick
+                </th>
+                <td>
+                    @Math.Round(Model.optimalTotalCreepCostEachTick, 2) energy
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Optimal Transferer Cost Each Tick
+                </th>
+                <td>
+                    @Model.optimalTransfererCreepCostEachTick energy
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Optimal Harvester Cost Each Tick
+                </th>
+                <td>
+                    @Model.optimalHarvesterCreepsCostEachTick energy
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Optimal Reserver Cost Each Tick
+                </th>
+                <td>
+                    @Model.optimalReserverCreepCostEachTick energy
+                </td>
+            </tr>
+
+            @*Optimal Income/Expense*@
+            <tr>
+                <th>
+                    Optimal Profit Each Tick
+                </th>
+                <td>
+                    @{
+                        double optimalProfitNumber = Model.optimalEnergyEachTick - Model.optimalTotalCreepCostEachTick;
+                        double optimalProfitPercentage = Math.Abs(Math.Round((Model.optimalTotalCreepCostEachTick / Model.optimalEnergyEachTick - 1) * 100, 2));
+                    }
+                    @optimalProfitNumber / @optimalProfitPercentage%
+                </td>
+            </tr>
+        </table>
+    </div>
+}
