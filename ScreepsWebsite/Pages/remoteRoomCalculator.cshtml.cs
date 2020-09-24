@@ -144,7 +144,7 @@ namespace ScreepsWebsite.Pages
             if (sourceAmount > 0 && averageRange > 0)
             {
                 inputEnergyEachTick = sourceAmount * 10;
-                if (isRoomReserverd == null)
+                if (isRoomReserverd == "on")
                 {
                     inputEnergyEachTick = inputEnergyEachTick / 2;
                 }
@@ -184,9 +184,9 @@ namespace ScreepsWebsite.Pages
 
 
                 // Optimal Creep Body //
-                optimalTransfererBody[0] = Convert.ToInt32(Math.Ceiling(optimalEnergyEachTick * averageRange / 50));
+                optimalTransfererBody[0] = Convert.ToInt32(Math.Ceiling(optimalEnergyEachTick * averageRange * 2 / 50));
                 optimalTransfererBody[1] = optimalTransfererBody[0];
-                optimalHarvesterBody[0] = (int)Math.Ceiling(optimalEnergyEachTick * 1.2 / 4);
+                optimalHarvesterBody[0] = (int)Math.Ceiling(optimalEnergyEachTick * 1.2 / 2);
                 optimalHarvesterBody[1] = optimalHarvesterBody[0] / 2;
                 optimalHarvesterBody[2] = 1;
                 if (isRoomReserverd == "on")
